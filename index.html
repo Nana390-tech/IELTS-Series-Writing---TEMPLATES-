@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Write It Right · IELTS Writing Templates</title>
+<style>
+:root{--p:#365314;--p2:#4d7c0f;--ps:#eef5e1;--a:#db2777;--as:#fde4ef;--ink:#1f2a12;--muted:#5f6a52;--bg:#f7f8f2;--fs:18px}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;font-size:var(--fs);line-height:1.6;color:var(--ink);background:var(--bg)}
+button{font:inherit;cursor:pointer}
+input,select{font:inherit}
+.ar{font-family:Tahoma,"Segoe UI",Arial,sans-serif;direction:rtl;unicode-bidi:isolate}
+.hidden{display:none!important}
+
+/* header */
+header{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;padding:28px 22px 70px;position:relative;overflow:hidden;text-align:center}
+header h1{margin:6px 0 6px;font-size:clamp(1.8em,4vw,2.7em);line-height:1.1}
+header p{margin:0 auto;max-width:720px;opacity:.92}
+.tag{display:inline-block;background:var(--a);color:#fff;font-weight:800;font-size:.75em;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border-radius:30px}
+.bricks{position:absolute;inset:0;pointer-events:none;opacity:.18}
+.bricks span{position:absolute;bottom:-40px;width:60px;height:16px;border-radius:5px;background:#fff;animation:up 9s linear infinite}
+@keyframes up{to{transform:translateY(-420px) rotate(25deg);opacity:0}}
+.tabs{display:flex;gap:10px;justify-content:center;margin-top:-46px;position:relative;z-index:2;flex-wrap:wrap;padding:0 12px}
+.tab{background:#fff;border:3px solid #fff;color:var(--p);border-radius:18px;padding:12px 22px;font-weight:800;box-shadow:0 10px 26px rgba(0,0,0,.14);text-align:left}
+.tab small{display:block;font-weight:600;color:var(--muted);font-size:.72em}
+.tab.on{background:var(--p);color:#fff;border-color:var(--a)}
+.tab.on small{color:#e7f2d3}
+
+/* toolbar */
+.toolbar{max-width:1240px;margin:18px auto 0;padding:0 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tb{border:2px solid #d4dcc6;background:#fff;color:var(--ink);border-radius:12px;padding:7px 14px;font-weight:700;font-size:.85em}
+.tb:hover{border-color:var(--p)}
+.tb.pink{background:var(--a);border-color:var(--a);color:#fff}
+.tb.green{background:var(--p);border-color:var(--p);color:#fff}
+.spacer{flex:1}
+.fsz button{width:38px}
+
+/* layout */
+.wrap{max-width:1240px;margin:0 auto;padding:16px;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:22px;align-items:start}
+main{min-width:0}
+.para{background:#fff;border-radius:22px;padding:20px 22px;margin-bottom:18px;box-shadow:0 4px 16px rgba(30,40,10,.07);border-left:8px solid #d4dcc6;transition:border-color .3s}
+.para.done{border-left-color:#16a34a}
+.phead{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.pnum{width:42px;height:42px;border-radius:12px;background:var(--p);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:1.1em}
+.para.done .pnum{background:#16a34a}
+.phead h2{margin:0;font-size:1.2em;color:var(--p);flex:1}
+.phead .ar{color:var(--muted);font-size:.9em}
+.badge{font-size:.72em;font-weight:800;border-radius:20px;padding:2px 10px;background:#f1f3ec;color:var(--muted)}
+.para.done .badge{background:#dcfce7;color:#166534}
+.purpose{background:var(--ps);border-radius:12px;padding:8px 14px;font-size:.9em;margin:6px 0 14px}
+.purpose .ar{display:block;color:var(--p);margin-top:2px}
+.frame{display:flex;flex-wrap:wrap;align-items:center;gap:6px 6px;padding:10px 0;border-top:1px dashed #e3e7da;line-height:2.1}
+.frame:first-of-type{border-top:none}
+.frame .lbl{font-size:.7em;font-weight:800;color:#fff;background:var(--a);border-radius:8px;padding:0 7px;margin-right:4px}
+.frame .lbl.opt{background:#a3a99a}
+.frame select{border:2px solid var(--p);background:var(--ps);color:var(--p);font-weight:700;border-radius:10px;padding:2px 6px}
+.frame input{flex:0 1 auto;border:none;border-bottom:2px solid var(--a);background:#fff6fa;border-radius:8px 8px 0 0;padding:2px 8px;min-width:120px;max-width:100%;color:var(--ink)}
+.frame input:focus{outline:none;background:#fff;box-shadow:0 0 0 3px var(--as)}
+.frame input.filled{background:#fff;border-bottom-color:#16a34a}
+.frame .txt{white-space:pre-wrap}
+
+/* side */
+.side{position:sticky;top:12px;display:flex;flex-direction:column;gap:16px}
+.card{background:#fff;border-radius:20px;padding:16px 18px;box-shadow:0 4px 16px rgba(30,40,10,.07)}
+.card h3{margin:0 0 8px;font-size:1.02em;color:var(--p)}
+.meter{height:12px;background:#eef0e8;border-radius:10px;overflow:hidden;margin:6px 0}
+.meter i{display:block;height:100%;width:0;background:var(--a);transition:width .4s}
+.meter i.ok{background:#16a34a}
+.wc{font-weight:900;font-size:1.6em;color:var(--p)}
+.preview{font-size:.92em;max-height:46vh;overflow:auto;padding-right:6px}
+.preview p{margin:0 0 10px}
+.preview .gap{color:var(--a);font-weight:700}
+.bank{max-height:34vh;overflow:auto}
+.bank h4{margin:10px 0 4px;font-size:.85em;color:var(--a);text-transform:uppercase;letter-spacing:.05em}
+.chip{display:inline-flex;flex-direction:column;background:var(--ps);border-radius:10px;padding:3px 9px;margin:3px;font-size:.82em;line-height:1.3;border:none;text-align:left}
+.chip .ar{font-size:.85em;color:var(--muted)}
+.checks label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;font-size:.88em;border-bottom:1px solid #f1f3ec;cursor:pointer}
+.checks input{margin-top:6px;accent-color:var(--p);transform:scale(1.2)}
+.checks .ar{display:block;color:var(--muted);font-size:.9em}
+footer{text-align:center;color:var(--muted);font-size:.85em;padding:20px 10px 40px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 20px;border-radius:12px;z-index:50;font-weight:700}
+canvas#cf{position:fixed;inset:0;pointer-events:none;z-index:60}
+
+/* print */
+#print{display:none}
+@media print{
+  body{background:#fff;font-size:12pt}
+  body > *:not(#print){display:none!important}
+  #print{display:block}
+  #print h1{font-size:18pt;margin:0 0 4px;color:#365314}
+  #print h2{font-size:13pt;margin:14px 0 4px;color:#365314;border-bottom:1.5px solid #365314}
+  #print .pp{font-size:10pt;color:#444;margin:0 0 6px}
+  #print .fr{margin:5px 0;line-height:1.9}
+  #print .op{font-weight:700}
+  #print .bl{display:inline-block;border-bottom:1px solid #000;min-width:150px}
+  #print .bl small{font-size:7.5pt;color:#777}
+  #print .mine p{margin:0 0 9pt;line-height:1.7}
+  #print .foot{margin-top:14px;font-size:9pt;color:#666}
+}
+@media (max-width:980px){.wrap{grid-template-columns:1fr}.side{position:static}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bricks" id="bricks"></div>
+  <span class="tag">LSC 0316 · IELTS Writing</span>
+  <h1>Write It Right: Writing Templates</h1>
+  <p>Build your answer one paragraph at a time. Choose a phrase from each <b style="color:#fbd3e6">drop-down</b> and type your own ideas in each <b style="color:#fbd3e6">pink gap</b>. Your writing grows on the right.</p>
+</header>
+<div class="tabs">
+  <button class="tab on" data-t="t1">📈📊 Task 1<small>Line graph + bar chart · 150+ words</small></button>
+  <button class="tab" data-t="t2">🧩 Task 2<small>Cause–solution essay · 250+ words</small></button>
+</div>
+<div class="toolbar">
+  <button class="tb pink" id="exBtn">👀 Show an example</button>
+  <button class="tb" id="clrBtn">🧹 Clear</button>
+  <span class="spacer"></span>
+  <span class="fsz"><button class="tb" id="fm">A−</button> <button class="tb" id="fp">A+</button></span>
+  <button class="tb" id="copyBtn">📋 Copy my writing</button>
+  <button class="tb" id="printMine">🖨 Print / PDF my writing</button>
+  <button class="tb" id="printBlank">📄 Print blank template</button>
+  <button class="tb green" id="saveBtn">💾 Save</button>
+  <label class="tb">📂 Load<input type="file" id="loadFile" accept=".json" hidden></label>
+</div>
+<div class="wrap">
+  <main id="paras"></main>
+  <aside class="side">
+    <div class="card"><h3>✍️ My writing</h3><div><span class="wc" id="wc">0</span> words <span class="badge" id="target"></span></div><div class="meter"><i id="meter"></i></div><div class="preview" id="preview"></div></div>
+    <div class="card"><h3>🧰 Language bank</h3><div class="bank" id="bank"></div></div>
+    <div class="card"><h3>✅ Before you finish</h3><div class="checks" id="checks"></div></div>
+  </aside>
+</div>
+<footer>Use these frames to <b>practise</b> structure. In the exam, write your own sentences on the same plan. Designed by: Nazila Motahari</footer>
+<div id="print"></div>
+
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* Frame syntax: [a|b|c] = drop-down choice, {hint} = student's own words. "?" at start = optional sentence. */
+const T = {
+ t1:{name:'Task 1 · Line graph + bar chart', min:150, target:'150–190 words',
+  paras:[
+   {title:'Introduction', ar:'المقدمة', purpose:'Say what BOTH charts show. Use your own words. Do not copy the question.', par:'اذكر ما يوضحه الرسمان بكلماتك الخاصة، ولا تنسخ السؤال.',
+    frames:['The line graph [shows|illustrates|compares] {what the line graph is about} {place and time period}, [while|whereas] the bar chart [shows|gives information about|illustrates] {what the bar chart is about}.']},
+   {title:'Overview', ar:'النظرة العامة', purpose:'The most important paragraph! Give the 2–3 biggest features of BOTH charts. No numbers here.', par:'أهم فقرة! اذكر أبرز ملامح الرسمين دون أرقام.',
+    frames:['Overall, {main trend in the line graph} [, while|, whereas| and] {second main trend in the line graph}.',
+            '[In addition,|It is also clear that|Regarding the bar chart,] {the biggest feature of the bar chart}.']},
+   {title:'Body 1 · Line graph', ar:'الفقرة الأولى: الرسم الخطي', purpose:'Describe the lines with numbers and years. Group similar lines together and compare them.', par:'صِف الخطوط بالأرقام والسنوات، وقارن بينها.',
+    frames:['[Looking at the line graph,|According to the line graph,|To begin with,] {line 1} [started at|stood at|was] {number} in {first year}.',
+            '[This figure|It] [rose|increased|grew|fell|decreased|dropped|fluctuated] [gradually|steadily|sharply|slightly|dramatically|significantly] to {number} in {year}.',
+            '[However,|After that,|Then,] it [peaked at|fell to|recovered to|remained stable at|reached] {number} {in / by + year}.',
+            '[In contrast,|Similarly,|Meanwhile,] {line 2} [rose|grew|increased|fell|decreased|declined] from {number} to {number}.',
+            '?{an extra detail, e.g. a crossing point: line 2 overtook line 3 in 2022}.']},
+   {title:'Body 2 · Bar chart', ar:'الفقرة الثانية: الرسم بالأعمدة', purpose:'Start with the biggest bar, then compare the others. Use percentages or numbers.', par:'ابدأ بأعلى عمود ثم قارن الباقي بالنسب أو الأرقام.',
+    frames:['[Turning to the bar chart,|As for the bar chart,|Looking at the bar chart,] the [most common|largest|highest|most popular] {category, e.g. reason / group} was {the biggest bar}, at {figure}.',
+            'This was [followed by|closely followed by] {the second bar} ({figure}).',
+            '[In contrast,|On the other hand,|However,] only {figure} {rest of the sentence}[, while|, whereas] {the smallest bar and its figure}.']}
+  ],
+  example:{0:[['shows','the number of children attending three types of after-school clubs','in one city between 2014 and 2024','while','shows','the main reasons parents gave for choosing a club in 2024']],
+   1:[['sports clubs were the most popular throughout the period',', while','coding and robotics clubs grew dramatically'],['In addition,','making friends was the most common reason parents gave for choosing a club']],
+   2:[['Looking at the line graph,','sports clubs','started at','42,000 children','2014'],['This figure','rose','gradually','47,000','2018'],['However,','fell to','30,000','in 2020, before recovering to 44,000 by 2024'],['In contrast,','coding and robotics clubs','grew','5,000','38,000'],['They overtook arts and crafts clubs in 2022']],
+   3:[['Turning to the bar chart,','most common','reason','making friends','34%'],['followed by','learning new skills','28%'],['In contrast,','12%','chose a club for childcare',', whereas','6% gave other reasons']]},
+  bank:[['Trend verbs',[['rose / increased','ارتفع / زاد'],['fell / decreased','انخفض / تناقص'],['peaked at','بلغ ذروته عند'],['recovered','تعافى / عاد للارتفاع'],['remained stable','ظل ثابتًا'],['fluctuated','تذبذب'],['overtook','تجاوز']]],
+        ['Adverbs',[['sharply / dramatically','بشكل حاد'],['gradually / steadily','تدريجيًا / بثبات'],['slightly','بشكل طفيف'],['significantly','بشكل ملحوظ']]],
+        ['Comparing',[['whereas / while','بينما'],['in contrast','على النقيض'],['followed by','يليه'],['the highest / the lowest','الأعلى / الأدنى'],['twice as many as','ضعف عدد'],['the same as','مثل / نفس']]],
+        ['Fractions',[['a quarter (25%)','ربع'],['a third (33%)','ثلث'],['just over half','أكثر من النصف بقليل'],['the majority','الأغلبية'],['a small minority','أقلية صغيرة']]]],
+  checks:[['I paraphrased the question in the introduction.','أعدت صياغة السؤال في المقدمة'],['My overview starts with "Overall," and has no numbers.','نظرتي العامة تبدأ بـ Overall دون أرقام'],['I described BOTH the line graph and the bar chart.','وصفت الرسمين كليهما'],['Every body sentence has data (numbers, %, years).','كل جملة في الفقرات تحتوي على بيانات'],['I used the past tense for past years.','استخدمت الزمن الماضي للسنوات الماضية'],['I did not give my opinion.','لم أكتب رأيي'],['I wrote at least 150 words in 4 paragraphs.','كتبت 150 كلمة على الأقل في 4 فقرات']]
+ },
+ t2:{name:'Task 2 · Cause–solution essay', min:250, target:'260–300 words',
+  paras:[
+   {title:'Introduction', ar:'المقدمة', purpose:'Paraphrase the topic, then say what the essay will do.', par:'أعد صياغة الموضوع ثم وضّح ما سيناقشه المقال.',
+    frames:['[Nowadays,|These days,|In recent years,] {the topic in your own words}.',
+            '?[As a result,|This often means that|Because of this,] {the effect of the problem}.',
+            'In this essay, I will [discuss|explain|examine] the main [causes of|reasons for] this [problem|trend|issue] and [suggest|propose|offer] some [practical|effective|possible] solutions.']},
+   {title:'Body 1 · Causes', ar:'الفقرة الأولى: الأسباب', purpose:'Give 2–3 causes. Explain each one and support it with an example.', par:'اذكر سببين أو ثلاثة واشرح كل سبب بمثال.',
+    frames:['There are [several|a number of|many] reasons why {the topic restated}.',
+            'The [main|most important|first] cause is {cause 1}.',
+            '[For example,|For instance,] {an example}[, so|, which means that|. As a result,] {the result of the example}.',
+            '[Another reason is that|In addition,|A further cause is that] {cause 2}.',
+            '[This is because|This happens because|As a result,] {explanation of cause 2}.',
+            '?[Moreover,|Furthermore,|Finally,] {cause 3}.']},
+   {title:'Body 2 · Solutions', ar:'الفقرة الثانية: الحلول', purpose:'Give one solution for each cause, in the same order. Say WHO should do WHAT.', par:'اقترح حلًا لكل سبب بنفس الترتيب: من يفعل ماذا؟',
+    frames:['[Fortunately,|However,] there are [several|a number of] ways to [solve|tackle|reduce] this problem.',
+            '[Firstly,|The most effective solution is that] {who} [should|could|need to] {action for cause 1}.',
+            '[For instance,|For example,] {how this would work}.',
+            '[Secondly,|In addition,|Another solution is that] {who} [should|could|must] {action for cause 2}[, so that|, which means that] {the result}.',
+            '?[Finally,|Moreover,] {solution for cause 3}.']},
+   {title:'Conclusion', ar:'الخاتمة', purpose:'Summarise the causes and the solutions. No new ideas!', par:'لخّص الأسباب والحلول دون أفكار جديدة.',
+    frames:['[In conclusion,|To sum up,|To conclude,] {cause 1}, {cause 2} and {cause 3} are the main reasons why {the topic}.',
+            'However, if {solution 1}, {solution 2} and {solution 3}, [this problem can be greatly reduced|the situation will improve|everyone will benefit].']}
+  ],
+  example:{0:[['These days,','many university students struggle to organise their time effectively'],['As a result,','they often feel stressed and submit their assignments late'],['discuss','causes of','problem','suggest','practical']],
+   1:[['several','students find time management difficult'],['main','the large number of distractions in their daily lives'],['For example,','many students check social media while they are studying',', so','a one-hour task can easily take three hours'],['Another reason is that','many students have never learned how to plan their own time'],['This is because','teachers organised their work for them at school'],['Moreover,','some students find it hard to say no to family and social events, which leaves them with little time for their studies']],
+   2:[['Fortunately,','several','solve'],['Firstly,','students','should','switch off phone notifications while they study'],['For instance,','leaving the phone in another room can help them finish tasks much faster'],['Secondly,','universities','could','teach time-management skills in the first semester',', so that','students learn to break big assignments into smaller tasks'],['Finally,','students can plan their study time at the start of each week, so that family events do not take time away from their assignments']],
+   3:[['In conclusion,','distractions','a lack of planning skills','too many commitments','students struggle to manage their time'],['students reduce distractions','universities provide training','students plan their weeks carefully','this problem can be greatly reduced']]},
+  bank:[['Cause language',[['The main cause is…','السبب الرئيسي هو…'],['Another reason is that…','سبب آخر هو أن…'],['This is because…','وذلك لأن…'],['due to / because of','بسبب'],['leads to / results in','يؤدي إلى']]],
+        ['Solution language',[['One solution is to…','أحد الحلول هو…'],['… should / could …','يجب / يمكن'],['It is important to…','من المهم أن…'],['so that / in order to','لكي / من أجل'],['tackle / solve / reduce','يعالج / يحل / يقلل']]],
+        ['Examples',[['For example, / For instance,','على سبيل المثال'],['such as','مثل'],['In my country,','في بلدي']]],
+        ['Linking',[['Firstly, / Secondly, / Finally,','أولًا / ثانيًا / أخيرًا'],['Moreover, / Furthermore,','علاوة على ذلك'],['As a result,','نتيجة لذلك'],['However,','ومع ذلك'],['In conclusion,','في الختام']]]],
+  checks:[['My introduction paraphrases the topic and ends with "In this essay, I will…"','مقدمتي تعيد صياغة الموضوع وتنتهي بـ In this essay'],['Body 1 has 2–3 causes, each with an explanation or example.','الفقرة الأولى فيها 2-3 أسباب مع شرح أو مثال'],['Body 2 has a solution for each cause, in the same order.','الفقرة الثانية فيها حل لكل سبب بنفس الترتيب'],['Each body paragraph starts with a clear topic sentence.','كل فقرة تبدأ بجملة رئيسية واضحة'],['My conclusion summarises with no new ideas.','خاتمتي تلخص دون أفكار جديدة'],['I checked capital letters, full stops and spelling.','راجعت الحروف الكبيرة والنقاط والإملاء'],['I wrote at least 250 words in 4 paragraphs.','كتبت 250 كلمة على الأقل في 4 فقرات']]
+ }
+};
+
+/* ---------- parse frames ---------- */
+function parse(f){ const opt=f.startsWith('?'); if(opt) f=f.slice(1); const parts=[]; const re=/\[([^\]]+)\]|\{([^}]+)\}/g; let i=0,m;
+  while((m=re.exec(f))){ if(m.index>i) parts.push({s:f.slice(i,m.index)}); if(m[1]) parts.push({c:m[1].split('|')}); else parts.push({t:m[2]}); i=re.lastIndex; }
+  if(i<f.length) parts.push({s:f.slice(i)}); return {opt,parts}; }
+Object.values(T).forEach(t=>t.paras.forEach(p=>p.F=p.frames.map(parse)));
+
+/* ---------- state ---------- */
+let cur='t1';
+const S={app:'write-it-right', v:{t1:{},t2:{}}, checks:{t1:{},t2:{}}};
+const key=(pi,fi)=>pi+'-'+fi;
+function val(t,pi,fi,si){ const a=S.v[t][key(pi,fi)]; return a?a[si]:undefined; }
+function setVal(t,pi,fi,si,v){ const k=key(pi,fi); (S.v[t][k]=S.v[t][k]||[])[si]=v; }
+
+/* ---------- render ---------- */
+function renderParas(){
+  const t=T[cur];
+  $('#paras').innerHTML=t.paras.map((p,pi)=>`<section class="para" id="p${pi}"><div class="phead"><div class="pnum">${pi+1}</div><h2>${esc(p.title)} <span class="ar">${esc(p.ar)}</span></h2><span class="badge" id="b${pi}">to do</span></div>
+    <div class="purpose">🎯 ${esc(p.purpose)}<span class="ar">${esc(p.par)}</span></div>
+    ${p.F.map((f,fi)=>{ let si=-1; return `<div class="frame">${f.opt?'<span class="lbl opt">optional</span>':'<span class="lbl">'+(fi+1)+'</span>'}${f.parts.map(x=>{
+      if(x.s) return `<span class="txt">${esc(x.s)}</span>`; si++;
+      if(x.c) return `<select data-p="${pi}" data-f="${fi}" data-s="${si}">${x.c.map(o=>`<option>${esc(o)}</option>`).join('')}</select>`;
+      return `<input data-p="${pi}" data-f="${fi}" data-s="${si}" placeholder="${esc(x.t)}" size="${Math.max(12,x.t.length)}" autocomplete="off" spellcheck="true">`;
+    }).join('')}</div>`; }).join('')}</section>`).join('');
+  // restore
+  $$('#paras select, #paras input').forEach(el=>{ const v=val(cur,+el.dataset.p,+el.dataset.f,+el.dataset.s); if(v!=null) el.value=v; else if(el.tagName==='SELECT') setVal(cur,+el.dataset.p,+el.dataset.f,+el.dataset.s,el.value); fit(el); });
+  $('#bank').innerHTML=t.bank.map(([h,items])=>`<h4>${esc(h)}</h4>${items.map(i=>`<button class="chip" title="Click to copy" data-copy="${esc(i[0])}">${esc(i[0])}<span class="ar">${esc(i[1])}</span></button>`).join('')}`).join('');
+  $('#checks').innerHTML=t.checks.map((c,i)=>`<label><input type="checkbox" data-ck="${i}" ${S.checks[cur][i]?'checked':''}><span>${esc(c[0])}<span class="ar">${esc(c[1])}</span></span></label>`).join('');
+  $('#target').textContent='target '+t.target;
+  update();
+}
+function fit(el){ if(el.tagName==='INPUT'){ el.size=Math.max(12,(el.value||el.placeholder).length+1); el.classList.toggle('filled',!!el.value.trim()); } }
+
+/* ---------- assemble ---------- */
+function sentence(t,pi,fi,forPreview){
+  const f=T[t].paras[pi].F[fi]; let si=-1, anyText=false, missing=false, out='';
+  f.parts.forEach(x=>{ if(x.s){ out+=x.s; return; } si++; const v=val(t,pi,fi,si);
+    if(x.c) out+=(v||x.c[0]); else { if(v&&v.trim()){ anyText=true; out+=v.trim(); } else { missing=true; out+=forPreview?'\u0001___\u0002':'___'; } } });
+  if(f.opt && !anyText) return '';
+  out=out.replace(/\s+/g,' ').replace(/\s+([,.])/g,'$1').replace(/\.\./g,'.').replace(/,,/g,',').trim();
+  out=out.replace(/^([\u0001]?)([a-z])/,(m,a,b)=>a+b.toUpperCase());
+  return out;
+}
+function paragraphs(t,forPreview){ return T[t].paras.map((p,pi)=>p.F.map((f,fi)=>sentence(t,pi,fi,forPreview)).filter(Boolean).join(' ')); }
+function words(s){ return (s.replace(/___/g,'').match(/[A-Za-z0-9][A-Za-z0-9'’%.,-]*/g)||[]).length; }
+let celebrated={};
+function update(){
+  const ps=paragraphs(cur,true), plain=paragraphs(cur,false).join('\n\n');
+  $('#preview').innerHTML=ps.map(p=>`<p>${esc(p).replace(/\u0001___\u0002/g,'<span class="gap">___</span>')}</p>`).join('');
+  const w=words(plain), min=T[cur].min; $('#wc').textContent=w;
+  $('#meter').style.width=Math.min(100,w/min*100)+'%'; $('#meter').classList.toggle('ok',w>=min);
+  T[cur].paras.forEach((p,pi)=>{ const done=p.F.every((f,fi)=>{ if(f.opt) return true; let si=-1; return f.parts.every(x=>{ if(x.s) return true; si++; return x.c || ((val(cur,pi,fi,si)||'').trim()); }); });
+    const el=$('#p'+pi); if(el){ el.classList.toggle('done',done); $('#b'+pi).textContent=done?'✓ complete':'to do'; } });
+  if(w>=min && $$('.para.done').length===T[cur].paras.length && !celebrated[cur]){ celebrated[cur]=true; confetti(); toast('🎉 All four paragraphs are complete and you reached the word count!'); }
+}
+
+/* ---------- events ---------- */
+$('#paras').addEventListener('input',e=>{ const el=e.target; if(!el.dataset.p) return; setVal(cur,+el.dataset.p,+el.dataset.f,+el.dataset.s,el.value); fit(el); update(); });
+$('#paras').addEventListener('change',e=>{ const el=e.target; if(!el.dataset.p) return; setVal(cur,+el.dataset.p,+el.dataset.f,+el.dataset.s,el.value); update(); });
+$('#checks').addEventListener('change',e=>{ if(e.target.dataset.ck) S.checks[cur][e.target.dataset.ck]=e.target.checked; });
+$('#bank').addEventListener('click',e=>{ const b=e.target.closest('[data-copy]'); if(b){ copy(b.dataset.copy); toast('Copied: '+b.dataset.copy); } });
+$$('.tab').forEach(b=>b.onclick=()=>{ cur=b.dataset.t; $$('.tab').forEach(x=>x.classList.toggle('on',x===b)); renderParas(); window.scrollTo({top:0,behavior:'smooth'}); });
+$('#exBtn').onclick=()=>{
+  const has=Object.values(S.v[cur]).some(a=>a&&a.some(v=>v&&String(v).trim()&&!T[cur].paras.some(p=>p.F.some(f=>f.parts.some(x=>x.c&&x.c[0]===v)))));
+  const go=()=>{ S.v[cur]={}; const ex=T[cur].example; Object.keys(ex).forEach(pi=>ex[pi].forEach((vals,fi)=>{ S.v[cur][key(pi,fi)]=vals.slice(); })); celebrated[cur]=true; renderParas(); toast('👀 Example loaded. Read it, then press Clear and write your own!'); };
+  if(has && !confirm('This replaces what you have written in this template. Continue?')) return; go();
+};
+$('#clrBtn').onclick=()=>{ if(!confirm('Clear everything in this template?')) return; S.v[cur]={}; celebrated[cur]=false; renderParas(); };
+$('#copyBtn').onclick=()=>{ copy(paragraphs(cur,false).join('\n\n')); toast('📋 Your writing was copied. Paste it into Word or your exam app to keep practising.'); };
+$('#saveBtn').onclick=()=>{ const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,1)],{type:'application/json'})); a.download='write-it-right_my-templates.json'; a.click(); toast('💾 Saved to your Downloads folder.'); };
+$('#loadFile').onchange=e=>{ const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=()=>{ try{ const d=JSON.parse(r.result); if(d.app!=='write-it-right') throw 0; Object.assign(S,d); renderParas(); toast('📂 Your work has been loaded.'); }catch(err){ toast('That file could not be loaded.'); } }; r.readAsText(f); e.target.value=''; };
+let fs=18; $('#fp').onclick=()=>{fs=Math.min(26,fs+2);document.documentElement.style.setProperty('--fs',fs+'px');}; $('#fm').onclick=()=>{fs=Math.max(14,fs-2);document.documentElement.style.setProperty('--fs',fs+'px');};
+
+/* ---------- printing ---------- */
+$('#printBlank').onclick=()=>{
+  const t=T[cur];
+  $('#print').innerHTML=`<h1>${esc(t.name)}: Writing Template</h1><p class="pp">Choose one option from each <b>bold</b> group and complete each line in your own words. Target: ${t.target}.</p>`+
+   t.paras.map((p,pi)=>`<h2>${pi+1}. ${esc(p.title)} <span class="ar" style="font-weight:400">${esc(p.ar)}</span></h2><p class="pp">${esc(p.purpose)}</p>`+p.F.map(f=>`<div class="fr">${f.opt?'<i>(optional)</i> ':''}${f.parts.map(x=>x.s?esc(x.s):x.c?`<span class="op">${x.c.map(esc).join(' / ')}</span>`:`<span class="bl"><small>${esc(x.t)}</small></span>`).join('')}</div>`).join('')).join('')+
+   `<h2>Checklist</h2>${t.checks.map(c=>`<div class="fr">☐ ${esc(c[0])}</div>`).join('')}<div class="foot">Write It Right · LSC 0316 · Designed by: Nazila Motahari</div>`;
+  window.print();
+};
+$('#printMine').onclick=()=>{
+  const t=T[cur], txt=paragraphs(cur,false);
+  $('#print').innerHTML=`<h1>${esc(t.name)}: My Writing</h1><p class="pp">${words(txt.join(' '))} words · ${new Date().toLocaleDateString()}</p><div class="mine">${txt.map(p=>`<p>${esc(p)}</p>`).join('')}</div><div class="foot">Write It Right · LSC 0316 · Designed by: Nazila Motahari</div>`;
+  window.print();
+};
+
+/* ---------- helpers ---------- */
+function copy(s){ if(navigator.clipboard) navigator.clipboard.writeText(s).catch(()=>fallback(s)); else fallback(s); }
+function fallback(s){ const ta=document.createElement('textarea'); ta.value=s; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');}catch(e){} ta.remove(); }
+function toast(m){ let t=$('.toast'); if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);} t.textContent=m; t.style.display='block'; clearTimeout(t._h); t._h=setTimeout(()=>t.style.display='none',3500); }
+function confetti(){ const cv=document.createElement('canvas'); cv.id='cf'; document.body.appendChild(cv); const x=cv.getContext('2d'); cv.width=innerWidth; cv.height=innerHeight;
+  const cols=['#365314','#84cc16','#db2777','#f9a8d4','#facc15']; const P=Array.from({length:160},()=>({x:Math.random()*cv.width,y:-20-Math.random()*cv.height*.5,r:5+Math.random()*6,c:cols[Math.floor(Math.random()*5)],vy:2+Math.random()*3,vx:-1.5+Math.random()*3,a:Math.random()*6}));
+  let n=0;(function d(){ x.clearRect(0,0,cv.width,cv.height); P.forEach(p=>{p.y+=p.vy;p.x+=p.vx;p.a+=.1;x.fillStyle=p.c;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillRect(-p.r/2,-p.r/2,p.r,p.r*.6);x.restore();}); if(++n<240) requestAnimationFrame(d); else cv.remove(); })(); }
+(function bricks(){ const b=$('#bricks'); for(let i=0;i<14;i++){ const s=document.createElement('span'); s.style.left=(Math.random()*100)+'%'; s.style.animationDelay=(-Math.random()*9)+'s'; s.style.width=(40+Math.random()*50)+'px'; b.appendChild(s);} })();
+renderParas();
+})();
+</script>
+</body>
+</html>
